@@ -1,0 +1,15 @@
+% Clear A and reuse it for Chessboard distance
+A = zeros(100, 100);
+
+% For Chessboard Distance
+for i = 1:100
+    for j = 1:100
+        % Chessboard distance formula
+        if max(abs(Cx - i), abs(Cy - j)) <= Radius
+            A(i, j) = 255; % Assign value for Chessboard distance
+        end
+    end
+end
+figure;
+imshow(A);
+title('Chessboard Distance');
